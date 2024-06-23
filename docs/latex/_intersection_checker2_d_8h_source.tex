@@ -1,0 +1,24 @@
+\doxysection{Intersection\+Checker2\+D.\+h}
+\hypertarget{_intersection_checker2_d_8h_source}{}\label{_intersection_checker2_d_8h_source}\index{include/IntersectionChecker2D.h@{include/IntersectionChecker2D.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ INTERSECTION\_CHECKER\_2D\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ INTERSECTION\_CHECKER\_2D\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Triangle.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Orientation.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_intersection_checker2_d}{IntersectionChecker2D}}\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_intersection_checker2_d_a89ea8ed9cd8fb281ab70cfdbd4bda13f}{checkIntersection}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_triangle}{Triangle}}\&\ t1,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_triangle}{Triangle}}\&\ t2)\ ;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ isLinesIntersect(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_point2_d}{Point2D}}\&\ p1,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_point2_d}{Point2D}}\&\ q1,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_point2_d}{Point2D}}\&\ p2,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_point2_d}{Point2D}}\&\ q2)\ ;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{static}\ Orientation\ determineOrientation(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_point2_d}{Point2D}}\&\ p,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_point2_d}{Point2D}}\&\ q,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_point2_d}{Point2D}}\&\ r)\ ;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ isOnSegment(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_point2_d}{Point2D}}\&\ p,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_point2_d}{Point2D}}\&\ q,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_point2_d}{Point2D}}\&\ r)\ ;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ isPointInsideTriangle(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_point2_d}{Point2D}}\&\ p,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_triangle}{Triangle}}\&\ t)\ ;}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ INTERSECTION\_CHECKER\_2D\_H}}
+
+\end{DoxyCode}

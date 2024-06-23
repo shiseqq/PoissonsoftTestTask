@@ -1,0 +1,26 @@
+\doxysection{Test\+Runner.\+h}
+\hypertarget{_test_runner_8h_source}{}\label{_test_runner_8h_source}\index{include/TestRunner.h@{include/TestRunner.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TEST\_RUNNER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TEST\_RUNNER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}IntersectionChecker2D.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_test_runner}{TestRunner}}\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_test_runner_a9b063e7cb4e5ad5a869ada18b97ffdfc}{TestRunner}}(std::unique\_ptr<IntersectionChecker2D>\ checker)\ :\ checker(std::move(checker))\ \{\}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_test_runner_a55893ae8f4a586bfda5ba4de592cd965}{runTests}}(\textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{00027\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00028\ \ \ \ \ std::unique\_ptr<IntersectionChecker2D>\ checker;\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{static}\ std::vector<Point2D>\ parseVertices(std::stringstream\&\ ss);}
+\DoxyCodeLine{00036\ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ TEST\_RUNNER\_H}}
+
+\end{DoxyCode}

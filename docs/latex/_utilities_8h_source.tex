@@ -1,0 +1,27 @@
+\doxysection{Utilities.\+h}
+\hypertarget{_utilities_8h_source}{}\label{_utilities_8h_source}\index{include/Utilities.h@{include/Utilities.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ UTILITIES\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ UTILITIES\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <cctype>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{inline}\ std::string\ toLower(\textcolor{keyword}{const}\ std::string\&\ str)\ \{}
+\DoxyCodeLine{00010\ \ \ \ \ std::string\ result\ =\ str;}
+\DoxyCodeLine{00011\ \ \ \ \ std::transform(result.begin(),\ result.end(),\ result.begin(),\ [](\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ c)\ \{}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ return\ std::tolower(c);}
+\DoxyCodeLine{00013\ \ \ \ \ \});}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00015\ \}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{void}\ printUsage(\textcolor{keyword}{const}\ std::string\&\ programName)\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Usage:\ "{}}\ <<\ programName\ <<\ \textcolor{stringliteral}{"{}\ <input\ file>\(\backslash\)n"{}};}
+\DoxyCodeLine{00019\ \}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ UTILITIES\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,62 @@
+\doxysection{Triangle Class Reference}
+\hypertarget{class_triangle}{}\label{class_triangle}\index{Triangle@{Triangle}}
+
+
+Represents a triangle in 2D space.  
+
+
+
+
+{\ttfamily \#include $<$Triangle.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_triangle_ae08575b0f31da740938f3750fee93831}{Triangle}} (const std\+::vector$<$ \mbox{\hyperlink{class_point2_d}{Point2D}} $>$ \&\mbox{\hyperlink{class_triangle_a4490154bbdbb46c6b25a6281dcf22a3d}{vertices}})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_triangle}{Triangle} object with given vertices. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_point2_d}{Point2D}} $>$ \mbox{\hyperlink{class_triangle_a4490154bbdbb46c6b25a6281dcf22a3d}{vertices}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a triangle in 2D space. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_triangle_ae08575b0f31da740938f3750fee93831}\index{Triangle@{Triangle}!Triangle@{Triangle}}
+\index{Triangle@{Triangle}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{Triangle()}{Triangle()}}
+{\footnotesize\ttfamily \label{class_triangle_ae08575b0f31da740938f3750fee93831} 
+Triangle\+::\+Triangle (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{class_point2_d}{Point2D}} $>$ \&}]{vertices}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructs a \doxylink{class_triangle}{Triangle} object with given vertices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vertices} & A vector of 3 points representing the vertices of the triangle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if the number of vertices is not equal to 3. \\
+\hline
+\end{DoxyExceptions}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_triangle_a4490154bbdbb46c6b25a6281dcf22a3d}\index{Triangle@{Triangle}!vertices@{vertices}}
+\index{vertices@{vertices}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{vertices}{vertices}}
+{\footnotesize\ttfamily \label{class_triangle_a4490154bbdbb46c6b25a6281dcf22a3d} 
+std\+::vector$<$\mbox{\hyperlink{class_point2_d}{Point2D}}$>$ Triangle\+::vertices}
+
+The vertices of the triangle 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Triangle.\+h\item 
+src/Triangle.\+cpp\end{DoxyCompactItemize}
