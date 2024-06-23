@@ -1,6 +1,0 @@
-# ninja log v6
-148	551	7408435639023844	CMakeFiles/PoissonsoftTestTask.dir/src/IntersectionChecker2D.cpp.obj	35fa43706131009e
-74	622	7408435638282914	CMakeFiles/PoissonsoftTestTask.dir/src/Triangle.cpp.obj	b3785c5f72eb3812
-4	519	7408435819575054	CMakeFiles/PoissonsoftTestTask.dir/src/main.cpp.obj	f2525d7c65abd025
-4	435	7408436530121408	CMakeFiles/PoissonsoftTestTask.dir/src/TestRunner.cpp.obj	aad83209c91897aa
-436	788	7408436534438170	PoissonsoftTestTask.exe	64d847f9c81e5871
