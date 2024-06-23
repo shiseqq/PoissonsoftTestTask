@@ -19,9 +19,9 @@ public:
     static bool checkIntersection(const Triangle& t1, const Triangle& t2) ;
 
 private:
-    static bool doLinesIntersect(const Point2D& p1, const Point2D& q1, const Point2D& p2, const Point2D& q2) ;
-    static Orientation orientation(const Point2D& p, const Point2D& q, const Point2D& r) ;
-    static bool onSegment(const Point2D& p, const Point2D& q, const Point2D& r) ;
+    static bool isLinesIntersect(const Point2D& p1, const Point2D& q1, const Point2D& p2, const Point2D& q2) ;
+    static Orientation determineOrientation(const Point2D& p, const Point2D& q, const Point2D& r) ;
+    static bool isOnSegment(const Point2D& p, const Point2D& q, const Point2D& r) ;
     static bool isPointInsideTriangle(const Point2D& p, const Triangle& t) ;
 };
 
