@@ -3,8 +3,18 @@
 
 #include "Triangle.h"
 
+/**
+ * @class IntersectionChecker2D
+ * @brief Provides methods to check the intersection of two triangles in 2D space.
+ */
 class IntersectionChecker2D {
 public:
+    /**
+    * @brief Checks if two triangles intersect.
+    * @param t1 The first triangle.
+    * @param t2 The second triangle.
+    * @return true if the triangles intersect, false otherwise.
+    */
     static bool checkIntersection(const Triangle& t1, const Triangle& t2) ;
 
 private:
