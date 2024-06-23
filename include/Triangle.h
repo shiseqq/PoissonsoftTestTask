@@ -7,7 +7,6 @@
 class Triangle {
 public:
     explicit Triangle(const std::vector<Point2D>& verts);
-    bool isDegenerate() const;
     std::vector<Point2D> vertices;
 };
 
