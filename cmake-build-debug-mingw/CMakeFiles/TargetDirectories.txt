@@ -1,0 +1,3 @@
+D:/PoissonsoftTestTask/cmake-build-debug-mingw/CMakeFiles/PoissonsoftTestTask.dir
+D:/PoissonsoftTestTask/cmake-build-debug-mingw/CMakeFiles/edit_cache.dir
+D:/PoissonsoftTestTask/cmake-build-debug-mingw/CMakeFiles/rebuild_cache.dir
