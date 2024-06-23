@@ -70,5 +70,8 @@ expected_result
 true
 ```
 
+## Documentation
+Location of the PDF file with documentation: `docs/latex/refman.pdf`
+
 ## Author
 PoissonsoftTestTask developed by Igor Merkulov.
