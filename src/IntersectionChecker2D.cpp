@@ -22,6 +22,9 @@ int IntersectionChecker2D::orientation(const Point2D& p, const Point2D& q, const
     float val = (q.y - p.y) * (r.x - q.x) - (q.x - p.x) * (r.y - q.y);
     if (val == 0) return 0;
     return (val > 0) ? 1 : 2;
+    // 0 - points are collinear
+    // 1 - points form a clockwise rotation
+    // 2 - points form a counterclockwise rotation
 }
 
 bool IntersectionChecker2D::onSegment(const Point2D& p, const Point2D& q, const Point2D& r) {
@@ -39,6 +42,7 @@ bool IntersectionChecker2D::isPointInsideTriangle(const Point2D& p, const Triang
 }
 
 bool IntersectionChecker2D::checkIntersection(const Triangle& t1, const Triangle& t2) {
+    // Tests the intersection of all pairs of sides of two triangles
     for (int i = 0; i < 3; ++i) {
         if (doLinesIntersect(t1.vertices[i], t1.vertices[(i + 1) % 3], t2.vertices[0], t2.vertices[1]) ||
             doLinesIntersect(t1.vertices[i], t1.vertices[(i + 1) % 3], t2.vertices[1], t2.vertices[2]) ||
@@ -47,6 +51,7 @@ bool IntersectionChecker2D::checkIntersection(const Triangle& t1, const Triangle
         }
     }
 
+    //Checks whether any vertex of one triangle is inside another triangle.
     if (isPointInsideTriangle(t1.vertices[0], t2) || isPointInsideTriangle(t2.vertices[0], t1)) {
         return true;
     }
