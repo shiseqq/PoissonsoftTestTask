@@ -6,7 +6,7 @@
 
 class Triangle {
 public:
-    explicit Triangle(const std::vector<Point2D>& verts);
+    explicit Triangle(const std::vector<Point2D>& vertices);
     std::vector<Point2D> vertices;
 };
 
