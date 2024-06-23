@@ -2,6 +2,7 @@
 #define INTERSECTION_CHECKER_2D_H
 
 #include "Triangle.h"
+#include "Orientation.h"
 
 /**
  * @class IntersectionChecker2D
@@ -19,7 +20,7 @@ public:
 
 private:
     static bool doLinesIntersect(const Point2D& p1, const Point2D& q1, const Point2D& p2, const Point2D& q2) ;
-    static int orientation(const Point2D& p, const Point2D& q, const Point2D& r) ;
+    static Orientation orientation(const Point2D& p, const Point2D& q, const Point2D& r) ;
     static bool onSegment(const Point2D& p, const Point2D& q, const Point2D& r) ;
     static bool isPointInsideTriangle(const Point2D& p, const Triangle& t) ;
 };

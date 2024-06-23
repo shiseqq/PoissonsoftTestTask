@@ -2,26 +2,26 @@
 
 bool IntersectionChecker2D::doLinesIntersect(const Point2D& p1, const Point2D& q1,
                                              const Point2D& p2, const Point2D& q2) {
-    int o1 = orientation(p1, q1, p2);
-    int o2 = orientation(p1, q1, q2);
-    int o3 = orientation(p2, q2, p1);
-    int o4 = orientation(p2, q2, q1);
+    Orientation o1 = orientation(p1, q1, p2);
+    Orientation o2 = orientation(p1, q1, q2);
+    Orientation o3 = orientation(p2, q2, p1);
+    Orientation o4 = orientation(p2, q2, q1);
 
     if (o1 != o2 && o3 != o4)
         return true;
 
-    if (o1 == 0 && onSegment(p1, p2, q1)) return true;
-    if (o2 == 0 && onSegment(p1, q2, q1)) return true;
-    if (o3 == 0 && onSegment(p2, p1, q2)) return true;
-    if (o4 == 0 && onSegment(p2, q1, q2)) return true;
+    if (o1 == Orientation::Collinear && onSegment(p1, p2, q1)) return true;
+    if (o2 == Orientation::Collinear && onSegment(p1, q2, q1)) return true;
+    if (o3 == Orientation::Collinear && onSegment(p2, p1, q2)) return true;
+    if (o4 == Orientation::Collinear && onSegment(p2, q1, q2)) return true;
 
     return false;
 }
 
-int IntersectionChecker2D::orientation(const Point2D& p, const Point2D& q, const Point2D& r) {
+Orientation IntersectionChecker2D::orientation(const Point2D& p, const Point2D& q, const Point2D& r) {
     float val = (q.y - p.y) * (r.x - q.x) - (q.x - p.x) * (r.y - q.y);
-    if (val == 0) return 0;
-    return (val > 0) ? 1 : 2;
+    if (val == 0) return Orientation::Collinear;
+    return (val > 0) ? Orientation::Clockwise : Orientation::Counterclockwise;
     // 0 - points are collinear
     // 1 - points form a clockwise rotation
     // 2 - points form a counterclockwise rotation
@@ -35,9 +35,9 @@ bool IntersectionChecker2D::onSegment(const Point2D& p, const Point2D& q, const 
 }
 
 bool IntersectionChecker2D::isPointInsideTriangle(const Point2D& p, const Triangle& t) {
-    int o1 = orientation(t.vertices[0], t.vertices[1], p);
-    int o2 = orientation(t.vertices[1], t.vertices[2], p);
-    int o3 = orientation(t.vertices[2], t.vertices[0], p);
+    Orientation o1 = orientation(t.vertices[0], t.vertices[1], p);
+    Orientation o2 = orientation(t.vertices[1], t.vertices[2], p);
+    Orientation o3 = orientation(t.vertices[2], t.vertices[0], p);
     return (o1 == o2 && o2 == o3);
 }
 
