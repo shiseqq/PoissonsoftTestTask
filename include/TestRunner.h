@@ -1,8 +1,11 @@
 #ifndef TEST_RUNNER_H
 #define TEST_RUNNER_H
 
-#include <memory>
 #include "IntersectionChecker2D.h"
+#include <vector>
+#include <string>
+#include <memory>
+#include <sstream>
 
 class TestRunner {
 public:
@@ -10,6 +13,7 @@ public:
     void runTests(const std::string& filename);
 private:
     std::unique_ptr<IntersectionChecker2D> checker;
+    static std::vector<Point2D> parseVertices(std::stringstream& ss);
 };
 
 #endif // TEST_RUNNER_H
