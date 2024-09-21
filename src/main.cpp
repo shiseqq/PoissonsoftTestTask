@@ -10,10 +10,6 @@ int main(int argc, char* argv[]) {
     }
 
     std::string filename = argv[1];
-
-    // checker made for code scalability if you need to add intersection checking for 3D triangles
-    // we can add an abstract class IntersectionChecker with a pure virtual method checkIntersection
-    // such polymorphism will help us adhere to the Open/Closed Principle
     TestRunner runner;
     runner.runTests(filename);
 
